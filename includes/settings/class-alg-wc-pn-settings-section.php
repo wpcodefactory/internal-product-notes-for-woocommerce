@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Section Settings
  *
- * @version 2.7.3
+ * @version 2.8.0
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd
@@ -136,7 +136,7 @@ class Alg_WC_Product_Notes_Settings_Section {
 	/**
 	 * get_settings.
 	 *
-	 * @version 2.7.3
+	 * @version 2.8.0
 	 * @since   2.0.0
 	 *
 	 * @todo    [maybe] (desc) `_order_item_meta`: "Same notes will be displayed even if the product will be removed, or notes updated."?

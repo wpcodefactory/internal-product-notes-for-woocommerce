@@ -3,7 +3,7 @@ Contributors: algoritmika, anbinder
 Tags: woocommerce, product, product note, woo commerce
 Requires at least: 4.4
 Tested up to: 5.9
-Stable tag: 2.7.2
+Stable tag: 2.8.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -47,11 +47,12 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 
 == Changelog ==
 
-= 2.7.3 - 22/04/2022 =
+= 2.8.0 - 18/05/2022 =
 * Dev - Admin settings - "Advanced Options" subsection renamed to "Tools". Descriptions updated.
 * Dev - Tools - Products - Delete - Code refactoring.
 * Dev - Tools - "Orders" tools added ("Add" and "Delete").
 * Dev - Backend Options - Admin orders - Code refactoring.
+* WC tested up to: 6.5.
 
 = 2.7.2 - 19/04/2022 =
 * Dev - Backend Options - Admin products list column - CSS added.

@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Tools Class
  *
- * @version 2.7.3
+ * @version 2.8.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -30,7 +30,7 @@ class Alg_WC_Product_Notes_Tools {
 	/**
 	 * delete_all_notes.
 	 *
-	 * @version 2.7.3
+	 * @version 2.8.0
 	 * @since   1.1.2
 	 */
 	function delete_all_notes() {
@@ -49,7 +49,7 @@ class Alg_WC_Product_Notes_Tools {
 	/**
 	 * admin_notices_delete_all_notes.
 	 *
-	 * @version 2.7.3
+	 * @version 2.8.0
 	 * @since   1.1.2
 	 */
 	function admin_notices_delete_all_notes() {
