@@ -47,6 +47,9 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 
 == Changelog ==
 
+= 2.8.1 - 18/07/2022 =
+* Dev - Add deploy script.
+
 = 2.8.0 - 18/05/2022 =
 * Dev - Admin settings - "Advanced Options" subsection renamed to "Tools". Descriptions updated.
 * Dev - Tools - Products - Delete - Code refactoring.
