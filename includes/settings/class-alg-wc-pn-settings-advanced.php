@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Advanced Settings
  *
- * @version 2.7.0
+ * @version 2.9.0
  * @since   2.6.0
  *
  * @author  Algoritmika Ltd
@@ -41,7 +41,7 @@ class Alg_WC_Product_Notes_Settings_Advanced {
 	/**
 	 * get_settings.
 	 *
-	 * @version 2.7.0
+	 * @version 2.9.0
 	 * @since   2.6.0
 	 *
 	 * @todo    [next] (dev) Formatting Options: `admin_search_json` (will have to check `admin_search` as well)
@@ -83,6 +83,7 @@ class Alg_WC_Product_Notes_Settings_Advanced {
 			'single'                => __( 'Single product page', 'product-notes-for-woocommerce' ),
 			'loop'                  => __( 'Shop pages', 'product-notes-for-woocommerce' ),
 			'variation_description' => __( 'Variation description', 'product-notes-for-woocommerce' ),
+			'cart'                  => __( 'Cart', 'product-notes-for-woocommerce' ),
 			'products_column'       => __( 'Admin products list column', 'product-notes-for-woocommerce' ),
 			'admin_orders'          => __( 'Admin orders', 'product-notes-for-woocommerce' ),
 			'admin_emails'          => __( 'Admin emails', 'product-notes-for-woocommerce' ),

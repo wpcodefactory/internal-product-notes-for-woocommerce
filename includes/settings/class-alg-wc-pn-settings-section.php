@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Section Settings
  *
- * @version 2.8.0
+ * @version 2.9.0
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd
@@ -136,7 +136,7 @@ class Alg_WC_Product_Notes_Settings_Section {
 	/**
 	 * get_settings.
 	 *
-	 * @version 2.8.0
+	 * @version 2.9.0
 	 * @since   2.0.0
 	 *
 	 * @todo    [maybe] (desc) `_order_item_meta`: "Same notes will be displayed even if the product will be removed, or notes updated."?
@@ -313,6 +313,14 @@ class Alg_WC_Product_Notes_Settings_Section {
 				'id'       => "alg_wc_pn_{$private_or_public}_variation_description",
 				'type'     => 'checkbox',
 				'default'  => 'no',
+			),
+			array(
+				'title'    => __( 'Cart', 'product-notes-for-woocommerce' ),
+				'desc'     => __( 'Enable', 'product-notes-for-woocommerce' ),
+				'desc_tip' => __( 'Show product notes in cart on frontend.', 'product-notes-for-woocommerce' ),
+				'id'       => "alg_wc_pn_{$private_or_public}_cart",
+				'default'  => 'no',
+				'type'     => 'checkbox',
 			),
 		) );
 		if ( 'public' === $private_or_public ) {

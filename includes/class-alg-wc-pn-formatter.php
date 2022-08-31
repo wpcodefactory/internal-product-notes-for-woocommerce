@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Formatter Class
  *
- * @version 2.7.0
+ * @version 2.9.0
  * @since   2.7.0
  *
  * @author  Algoritmika Ltd
@@ -27,7 +27,7 @@ class Alg_WC_Product_Notes_Formatter {
 	/**
 	 * get_default_args.
 	 *
-	 * @version 2.7.0
+	 * @version 2.9.0
 	 * @since   2.7.0
 	 */
 	function get_default_args( $type ) {
@@ -67,6 +67,15 @@ class Alg_WC_Product_Notes_Formatter {
 					'make_clickable' => 'yes',
 					'glue'           => '<br>',
 					'content'        => '<p>%product_notes%</p>',
+				);
+			case 'cart':
+				return array(
+					'do_esc_html'    => 'no',
+					'do_shortcode'   => 'no',
+					'do_wpautop'     => 'no',
+					'make_clickable' => 'yes',
+					'glue'           => '<br>',
+					'content'        => '<div>%product_notes%</div>',
 				);
 			case 'product_tab':
 			case 'admin_orders':

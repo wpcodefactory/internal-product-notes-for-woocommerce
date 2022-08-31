@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Display Class
  *
- * @version 2.7.0
+ * @version 2.9.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -17,15 +17,17 @@ class Alg_WC_Product_Notes_Display_Frontend {
 	/**
 	 * Constructor.
 	 *
-	 * @version 2.5.0
+	 * @version 2.9.0
 	 * @since   2.0.0
 	 *
 	 * @todo    [next] Code refactoring: merge "product meta" with  "single/loop"
 	 * @todo    [next] `alg_wc_pn_public_logged_in_user_only`: optionally display "You have to log in" message
 	 */
 	function __construct() {
+
 		// Product tab
 		add_filter( 'woocommerce_product_tabs', array( $this, 'add_product_tabs' ) );
+
 		// Product meta, Single, Loop
 		foreach ( alg_wc_pn_get_enabled_sections() as $private_or_public ) {
 			if ( 'yes' === get_option( "alg_wc_pn_{$private_or_public}_product_meta", 'no' ) ) {
@@ -43,8 +45,32 @@ class Alg_WC_Product_Notes_Display_Frontend {
 				}
 			}
 		}
+
 		// Variations
 		add_filter( 'woocommerce_available_variation', array( $this, 'variation_description' ), 10, 3 );
+
+		// Cart
+		add_action( 'woocommerce_after_cart_item_name', array( $this, 'display_in_cart' ) );
+
+	}
+
+	/**
+	 * display_in_cart.
+	 *
+	 * @version 2.9.0
+	 * @since   2.9.0
+	 */
+	function display_in_cart( $cart_item ) {
+		$product_id = ( ! empty( $cart_item['variation_id'] ) ? $cart_item['variation_id'] : $cart_item['product_id'] );
+		foreach ( alg_wc_pn_get_enabled_sections() as $private_or_public ) {
+			if (
+				'yes' === get_option( "alg_wc_pn_{$private_or_public}_cart", 'no' ) &&
+				$this->do_display( $private_or_public ) &&
+				array() != alg_wc_pn()->core->get_product_note_values( $private_or_public, $product_id )
+			) {
+				echo alg_wc_pn_get_product_notes( $private_or_public, $product_id, alg_wc_pn()->core->formatter->get_args( $private_or_public, 'cart' ) );
+			}
+		}
 	}
 
 	/**
@@ -78,7 +104,7 @@ class Alg_WC_Product_Notes_Display_Frontend {
 	 * @version 2.0.0
 	 * @since   1.0.0
 	 *
-	 * @todo    [later] customizable user capability, i.e. `manage_woocommerce`
+	 * @todo    [later] customizable user capability, i.e., `manage_woocommerce`
 	 */
 	function current_user_is_admin() {
 		if ( ! isset( $this->is_user_admin ) ) {
