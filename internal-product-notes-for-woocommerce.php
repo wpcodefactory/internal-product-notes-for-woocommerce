@@ -3,12 +3,12 @@
 Plugin Name: Product Notes for WooCommerce
 Plugin URI: https://wpfactory.com/item/product-notes-for-woocommerce/
 Description: Add notes to WooCommerce products.
-Version: 2.9.0
+Version: 2.9.1
 Author: Algoritmika Ltd
 Author URI: https://algoritmika.com
 Text Domain: product-notes-for-woocommerce
 Domain Path: /langs
-WC tested up to: 6.8
+WC tested up to: 7.8
 */
 
 defined( 'ABSPATH' ) || exit;

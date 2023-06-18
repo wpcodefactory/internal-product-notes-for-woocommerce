@@ -1,9 +1,9 @@
 === Product Notes for WooCommerce ===
-Contributors: algoritmika, anbinder
+Contributors: algoritmika, anbinder, omardabbas, kousikmukherjeeli
 Tags: woocommerce, product, product note, woo commerce
 Requires at least: 4.4
-Tested up to: 6.0
-Stable tag: 2.9.0
+Tested up to: 6.2
+Stable tag: 2.9.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -46,6 +46,10 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 3. Start by visiting plugin settings at "WooCommerce > Settings > Product Notes".
 
 == Changelog ==
+
+= 2.9.1 - 18/06/2023 =
+* WC tested up to: 7.8.
+* Tested up to: 6.2.
 
 = 2.9.0 - 31/08/2022 =
 * Dev - Frontend Options - "Cart" option added.
