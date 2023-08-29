@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Display Class
  *
- * @version 2.9.0
+ * @version 2.9.2
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -116,16 +116,18 @@ class Alg_WC_Product_Notes_Display_Frontend {
 	/**
 	 * do_display.
 	 *
-	 * @version 2.3.0
+	 * @version 2.9.2
 	 * @since   2.3.0
 	 */
 	function do_display( $private_or_public ) {
 		switch ( $private_or_public ) {
-			case 'private':
-				return $this->current_user_is_admin();
 			case 'public':
-				return ( 'no' === get_option( 'alg_wc_pn_public_logged_in_user_only', 'no' ) || is_user_logged_in() );
+				$res = ( 'no' === get_option( 'alg_wc_pn_public_logged_in_user_only', 'no' ) || is_user_logged_in() );
+				break;
+			default: // 'private'
+				$res = $this->current_user_is_admin();
 		}
+		return apply_filters( 'alg_wc_pn_do_display', $res, $private_or_public );
 	}
 
 	/**

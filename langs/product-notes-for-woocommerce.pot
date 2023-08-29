@@ -11,7 +11,7 @@ msgid_plural "Public notes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/class-alg-wc-pn-display-frontend.php:253
+#: includes/class-alg-wc-pn-display-frontend.php:255
 #: includes/class-alg-wc-pn-edit.php:214
 #: includes/settings/class-alg-wc-pn-settings-section.php:156
 #: includes/settings/class-alg-wc-pn-settings-section.php:158
@@ -19,7 +19,7 @@ msgstr[1] ""
 msgid "Private notes"
 msgstr ""
 
-#: includes/class-alg-wc-pn-display-frontend.php:253
+#: includes/class-alg-wc-pn-display-frontend.php:255
 #: includes/class-alg-wc-pn-edit.php:214
 #: includes/settings/class-alg-wc-pn-settings-section.php:166
 msgid "Notes"
@@ -63,11 +63,11 @@ msgstr ""
 msgid "All notes have been deleted for %d product(s)."
 msgstr ""
 
-#: includes/class-alg-wc-pn.php:130
+#: includes/class-alg-wc-pn.php:150
 msgid "Settings"
 msgstr ""
 
-#: includes/class-alg-wc-pn.php:133
+#: includes/class-alg-wc-pn.php:153
 msgid "Go Pro"
 msgstr ""
 

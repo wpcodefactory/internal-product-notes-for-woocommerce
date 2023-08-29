@@ -3,12 +3,12 @@
 Plugin Name: Product Notes for WooCommerce
 Plugin URI: https://wpfactory.com/item/product-notes-for-woocommerce/
 Description: Add notes to WooCommerce products.
-Version: 2.9.1
+Version: 2.9.2
 Author: Algoritmika Ltd
 Author URI: https://algoritmika.com
 Text Domain: product-notes-for-woocommerce
 Domain Path: /langs
-WC tested up to: 7.8
+WC tested up to: 8.0
 */
 
 defined( 'ABSPATH' ) || exit;
@@ -17,7 +17,7 @@ if ( 'internal-product-notes-for-woocommerce.php' === basename( __FILE__ ) ) {
 	/**
 	 * Check if Pro plugin version is activated.
 	 *
-	 * @version 2.4.0
+	 * @version 2.9.2
 	 * @since   2.4.0
 	 */
 	$plugin = 'internal-product-notes-for-woocommerce-pro/internal-product-notes-for-woocommerce-pro.php';
@@ -25,11 +25,12 @@ if ( 'internal-product-notes-for-woocommerce.php' === basename( __FILE__ ) ) {
 		in_array( $plugin, (array) get_option( 'active_plugins', array() ), true ) ||
 		( is_multisite() && array_key_exists( $plugin, (array) get_site_option( 'active_sitewide_plugins', array() ) ) )
 	) {
+		defined( 'ALG_WC_PRODUCT_NOTES_FILE_FREE' ) || define( 'ALG_WC_PRODUCT_NOTES_FILE_FREE', __FILE__ );
 		return;
 	}
 }
 
-defined( 'ALG_WC_PRODUCT_NOTES_VERSION' ) || define( 'ALG_WC_PRODUCT_NOTES_VERSION', '2.9.0' );
+defined( 'ALG_WC_PRODUCT_NOTES_VERSION' ) || define( 'ALG_WC_PRODUCT_NOTES_VERSION', '2.9.2' );
 
 defined( 'ALG_WC_PRODUCT_NOTES_FILE' ) || define( 'ALG_WC_PRODUCT_NOTES_FILE', __FILE__ );
 
