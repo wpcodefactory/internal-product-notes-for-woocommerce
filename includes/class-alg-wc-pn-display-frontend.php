@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Display Class
  *
- * @version 2.9.2
+ * @version 2.9.5
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -13,6 +13,22 @@ defined( 'ABSPATH' ) || exit;
 if ( ! class_exists( 'Alg_WC_Product_Notes_Display_Frontend' ) ) :
 
 class Alg_WC_Product_Notes_Display_Frontend {
+
+	/**
+	 * is_user_admin.
+	 *
+	 * @version 2.9.5
+	 * @since   2.9.5
+	 */
+	public $is_user_admin;
+
+	/**
+	 * content.
+	 *
+	 * @version 2.9.5
+	 * @since   2.9.5
+	 */
+	public $content;
 
 	/**
 	 * Constructor.

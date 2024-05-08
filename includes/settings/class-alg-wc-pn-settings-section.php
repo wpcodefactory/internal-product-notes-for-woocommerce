@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Section Settings
  *
- * @version 2.9.0
+ * @version 2.9.5
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd
@@ -13,6 +13,30 @@ defined( 'ABSPATH' ) || exit;
 if ( ! class_exists( 'Alg_WC_Product_Notes_Settings_Section' ) ) :
 
 class Alg_WC_Product_Notes_Settings_Section {
+
+	/**
+	 * id.
+	 *
+	 * @version 2.9.5
+	 * @since   2.9.5
+	 */
+	public $id;
+
+	/**
+	 * desc.
+	 *
+	 * @version 2.9.5
+	 * @since   2.9.5
+	 */
+	public $desc;
+
+	/**
+	 * private_or_public.
+	 *
+	 * @version 2.9.5
+	 * @since   2.9.5
+	 */
+	public $private_or_public;
 
 	/**
 	 * Constructor.

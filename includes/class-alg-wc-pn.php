@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Main Class
  *
- * @version 2.9.2
+ * @version 2.9.5
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd
@@ -21,6 +21,14 @@ final class Alg_WC_Product_Notes {
 	 * @since 1.0.0
 	 */
 	public $version = ALG_WC_PRODUCT_NOTES_VERSION;
+
+	/**
+	 * core.
+	 *
+	 * @version 2.9.5
+	 * @since   2.9.5
+	 */
+	public $core;
 
 	/**
 	 * @var   Alg_WC_Product_Notes The single instance of the class

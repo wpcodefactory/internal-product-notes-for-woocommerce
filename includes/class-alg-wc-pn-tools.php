@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Tools Class
  *
- * @version 2.8.0
+ * @version 2.9.5
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -13,6 +13,14 @@ defined( 'ABSPATH' ) || exit;
 if ( ! class_exists( 'Alg_WC_Product_Notes_Tools' ) ) :
 
 class Alg_WC_Product_Notes_Tools {
+
+	/**
+	 * notice_data.
+	 *
+	 * @version 2.9.5
+	 * @since   2.9.5
+	 */
+	public $notice_data;
 
 	/**
 	 * Constructor.

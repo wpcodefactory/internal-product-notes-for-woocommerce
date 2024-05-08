@@ -3,12 +3,12 @@
 Plugin Name: Product Notes for WooCommerce
 Plugin URI: https://wpfactory.com/item/product-notes-for-woocommerce/
 Description: Add notes to WooCommerce products.
-Version: 2.9.4
+Version: 2.9.5
 Author: WPFactory
-Author URI: http://www.WPFactory.com
+Author URI: https://wpfactory.com
 Text Domain: product-notes-for-woocommerce
 Domain Path: /langs
-WC tested up to: 8.1
+WC tested up to: 8.8
 */
 
 defined( 'ABSPATH' ) || exit;
@@ -30,7 +30,7 @@ if ( 'internal-product-notes-for-woocommerce.php' === basename( __FILE__ ) ) {
 	}
 }
 
-defined( 'ALG_WC_PRODUCT_NOTES_VERSION' ) || define( 'ALG_WC_PRODUCT_NOTES_VERSION', '2.9.4' );
+defined( 'ALG_WC_PRODUCT_NOTES_VERSION' ) || define( 'ALG_WC_PRODUCT_NOTES_VERSION', '2.9.5' );
 
 defined( 'ALG_WC_PRODUCT_NOTES_FILE' ) || define( 'ALG_WC_PRODUCT_NOTES_FILE', __FILE__ );
 

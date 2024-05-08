@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Core Class
  *
- * @version 2.7.0
+ * @version 2.9.5
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd
@@ -13,6 +13,22 @@ defined( 'ABSPATH' ) || exit;
 if ( ! class_exists( 'Alg_WC_Product_Notes_Core' ) ) :
 
 class Alg_WC_Product_Notes_Core {
+
+	/**
+	 * wpml_use_default_language.
+	 *
+	 * @version 2.9.5
+	 * @since   2.9.5
+	 */
+	public $wpml_use_default_language;
+
+	/**
+	 * formatter.
+	 *
+	 * @version 2.9.5
+	 * @since   2.9.5
+	 */
+	public $formatter;
 
 	/**
 	 * Constructor.
