@@ -2,8 +2,8 @@
 Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas, kousikmukherjeeli
 Tags: woocommerce, product, product note, woo commerce
 Requires at least: 4.4
-Tested up to: 6.5
-Stable tag: 2.9.5
+Tested up to: 6.6
+Stable tag: 2.9.6
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -50,6 +50,10 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 3. Start by visiting plugin settings at "WooCommerce > Settings > Product Notes".
 
 == Changelog ==
+
+= 2.9.6 - 31/07/2024 =
+* WC tested up to: 9.1.
+* Tested up to: 6.6.
 
 = 2.9.5 - 08/05/2024 =
 * Dev - PHP 8.2 compatibility - "Creation of dynamic property is deprecated" notice fixed.
