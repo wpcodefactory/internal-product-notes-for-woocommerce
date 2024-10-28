@@ -1,9 +1,9 @@
 === Product Notes for WooCommerce ===
-Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas, kousikmukherjeeli
+Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas
 Tags: woocommerce, product, product note, woo commerce
 Requires at least: 4.4
 Tested up to: 6.6
-Stable tag: 2.9.6
+Stable tag: 3.0.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -50,6 +50,14 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 3. Start by visiting plugin settings at "WooCommerce > Settings > Product Notes".
 
 == Changelog ==
+
+= 3.0.0 - 28/10/2024 =
+* Dev - Plugin settings moved to the "WPFactory" menu.
+* Dev - "Recommendations" added.
+* Dev - "Key Manager" added.
+* Dev - Code refactoring.
+* WC tested up to: 9.3.
+* WooCommerce added to the "Requires Plugins" (plugin header).
 
 = 2.9.6 - 31/07/2024 =
 * WC tested up to: 9.1.
