@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Display Class
  *
- * @version 2.9.5
+ * @version 3.1.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -33,11 +33,11 @@ class Alg_WC_Product_Notes_Display_Frontend {
 	/**
 	 * Constructor.
 	 *
-	 * @version 2.9.0
+	 * @version 3.1.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] Code refactoring: merge "product meta" with  "single/loop"
-	 * @todo    [next] `alg_wc_pn_public_logged_in_user_only`: optionally display "You have to log in" message
+	 * @todo    (dev) Code refactoring: merge "product meta" with  "single/loop"
+	 * @todo    (dev) `alg_wc_pn_public_logged_in_user_only`: optionally display "You have to log in" message
 	 */
 	function __construct() {
 
@@ -68,6 +68,32 @@ class Alg_WC_Product_Notes_Display_Frontend {
 		// Cart
 		add_action( 'woocommerce_after_cart_item_name', array( $this, 'display_in_cart' ) );
 
+		// Checkout
+		add_action( 'woocommerce_cart_item_name', array( $this, 'display_in_checkout' ), 10, 3 );
+
+	}
+
+	/**
+	 * display_in_checkout.
+	 *
+	 * @version 3.1.0
+	 * @since   3.1.0
+	 */
+	function display_in_checkout( $item_name, $cart_item, $cart_item_key ) {
+		if ( ! is_checkout() ) {
+			return $item_name;
+		}
+		$product_id = ( ! empty( $cart_item['variation_id'] ) ? $cart_item['variation_id'] : $cart_item['product_id'] );
+		foreach ( alg_wc_pn_get_enabled_sections() as $private_or_public ) {
+			if (
+				'yes' === get_option( "alg_wc_pn_{$private_or_public}_checkout", 'no' ) &&
+				$this->do_display( $private_or_public ) &&
+				array() != alg_wc_pn()->core->get_product_note_values( $private_or_public, $product_id )
+			) {
+				$item_name .= alg_wc_pn_get_product_notes( $private_or_public, $product_id, alg_wc_pn()->core->formatter->get_args( $private_or_public, 'checkout' ) );
+			}
+		}
+		return $item_name;
 	}
 
 	/**
@@ -95,7 +121,7 @@ class Alg_WC_Product_Notes_Display_Frontend {
 	 * @version 2.7.0
 	 * @since   2.5.0
 	 *
-	 * @todo    [next] (dev) WPML: `$variation->get_id()` x 2
+	 * @todo    (dev) WPML: `$variation->get_id()` x 2
 	 */
 	function variation_description( $args, $product, $variation ) {
 		foreach ( alg_wc_pn_get_enabled_sections() as $private_or_public ) {
@@ -120,7 +146,7 @@ class Alg_WC_Product_Notes_Display_Frontend {
 	 * @version 2.0.0
 	 * @since   1.0.0
 	 *
-	 * @todo    [later] customizable user capability, i.e., `manage_woocommerce`
+	 * @todo    (dev) customizable user capability, i.e., `manage_woocommerce`
 	 */
 	function current_user_is_admin() {
 		if ( ! isset( $this->is_user_admin ) ) {
@@ -152,7 +178,7 @@ class Alg_WC_Product_Notes_Display_Frontend {
 	 * @version 2.7.0
 	 * @since   2.3.0
 	 *
-	 * @todo    [maybe] add date and author?
+	 * @todo    (dev) add date and author?
 	 */
 	function display( $private_or_public, $single_or_loop ) {
 		if ( ! $this->do_display( $private_or_public ) ) {
@@ -235,7 +261,7 @@ class Alg_WC_Product_Notes_Display_Frontend {
 	 * @version 2.7.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [maybe] add date and author
+	 * @todo    (dev) add date and author
 	 */
 	function display_in_product_meta( $private_or_public ) {
 		if ( ! $this->do_display( $private_or_public ) ) {
@@ -252,11 +278,11 @@ class Alg_WC_Product_Notes_Display_Frontend {
 	 * @version 2.6.0
 	 * @since   1.0.0
 	 *
-	 * @todo    [next] customizable tab IDs
-	 * @todo    [next] JS (i.e. when opened by link, tab should automatically open)
-	 * @todo    [maybe] per product: tab id
-	 * @todo    [maybe] per product: tab priority
-	 * @todo    [maybe] per product: tab enable/disable
+	 * @todo    (dev) customizable tab IDs
+	 * @todo    (dev) JS (i.e., when opened by link, tab should automatically open)
+	 * @todo    (dev) per product: tab id
+	 * @todo    (dev) per product: tab priority
+	 * @todo    (dev) per product: tab enable/disable
 	 */
 	function add_product_tabs( $tabs ) {
 		global $product;
@@ -290,7 +316,7 @@ class Alg_WC_Product_Notes_Display_Frontend {
 	 * @version 2.7.0
 	 * @since   2.2.0
 	 *
-	 * @todo    [maybe] add date and author?
+	 * @todo    (dev) add date and author?
 	 */
 	function display_product_tab( $private_or_public ) {
 		global $product;

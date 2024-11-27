@@ -15,8 +15,8 @@ jQuery( document ).ready( function() {
 	 * @version 2.5.1
 	 * @since   2.0.0
 	 *
-	 * @todo    [later] (dev) code refactoring, i.e. `foreach ( array( 'private', 'public' ) as $private_or_public )`
-	 * @todo    [later] (dev) "delete" with AJAX
+	 * @todo    (dev) code refactoring, i.e., `foreach ( array( 'private', 'public' ) as $private_or_public )`
+	 * @todo    (dev) "delete" with AJAX
 	 */
 	jQuery( '#' + alg_wc_pn.private_id + '_add' ).click( function( event ) {
 		var num = parseInt( jQuery( '#' + alg_wc_pn.private_id + '_num' ).val() );
@@ -53,7 +53,7 @@ jQuery( document ).ready( function() {
 	 * @see     https://make.wordpress.org/core/2017/05/20/editor-api-changes-in-4-8/
 	 * @see     https://gist.github.com/rheinardkorf/aec4d46d3833d2f7a6a27c4481ba0b44
 	 *
-	 * @todo    [next] (dev) match settings with PHP `wp_editor()`, e.g. `dragDropUpload`, `rows`, etc.
+	 * @todo    (dev) match settings with PHP `wp_editor()`, e.g., `dragDropUpload`, `rows`, etc.
 	 */
 	function alg_wc_pn_get_wp_editor_settings() {
 		return {

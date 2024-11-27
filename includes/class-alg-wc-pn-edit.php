@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Edit Class
  *
- * @version 2.7.0
+ * @version 3.1.0
  * @since   2.0.0
  *
  * @author  Algoritmika Ltd
@@ -21,23 +21,26 @@ class Alg_WC_Product_Notes_Edit {
 	 * @since   2.0.0
 	 */
 	function __construct() {
+
 		// Product meta box
 		add_action( 'add_meta_boxes',        array( $this, 'add_meta_boxes' ) );
 		add_action( 'save_post_product',     array( $this, 'save_meta_boxes' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
+
 		// Variations
 		add_action( 'woocommerce_product_after_variable_attributes', array( $this, 'add_notes_variation' ), 10, 3 );
 		add_action( 'woocommerce_save_product_variation',            array( $this, 'save_notes_variation' ), 10, 2 );
+
 	}
 
 	/**
 	 * add_notes_variation.
 	 *
-	 * @version 2.7.0
+	 * @version 3.1.0
 	 * @since   2.5.0
 	 *
-	 * @todo    [next] (dev) `wp_editor`: `quicktags` at least?
-	 * @todo    [later] (feature) multiple notes per variation?
+	 * @todo    (dev) `wp_editor`: `quicktags` at least?
+	 * @todo    (feature) multiple notes per variation?
 	 */
 	function add_notes_variation( $loop, $variation_data, $variation ) {
 		foreach ( alg_wc_pn_get_enabled_sections() as $private_or_public ) {
@@ -57,7 +60,8 @@ class Alg_WC_Product_Notes_Edit {
 						$author_name    = ( isset( $note['author'] ) ? get_userdata( $note['author'] ) : '' );
 						$author_name    = ( '' != $author_name ? $author_name->user_login : '' );
 						if ( '' != $formatted_time && '' != $author_name ) {
-							$desc = sprintf( __( 'Last modified by %s on %s.', 'product-notes-for-woocommerce' ), $author_name, $formatted_time );
+							/* Translators: %1$s: Author name, %2$s: Formatted time. */
+							$desc = sprintf( __( 'Last modified by %1$s on %2$s.', 'product-notes-for-woocommerce' ), $author_name, $formatted_time );
 						}
 					}
 				}
@@ -143,8 +147,8 @@ class Alg_WC_Product_Notes_Edit {
 	 * @version 2.0.0
 	 * @since   1.0.0
 	 *
-	 * @todo    [next] (feature) customizable meta box `context` and `priority`
-	 * @todo    [maybe] (feature) customizable meta box visibility (admin and/or shop manager)
+	 * @todo    (feature) customizable meta box `context` and `priority`
+	 * @todo    (feature) customizable meta box visibility (admin and/or shop manager)
 	 */
 	function add_meta_boxes() {
 		foreach ( alg_wc_pn_get_enabled_sections() as $private_or_public ) {
@@ -161,17 +165,17 @@ class Alg_WC_Product_Notes_Edit {
 	/**
 	 * display_meta_box.
 	 *
-	 * @version 2.5.1
+	 * @version 3.1.0
 	 * @since   1.0.0
 	 *
 	 * @see     https://developer.wordpress.org/reference/functions/wp_editor/
 	 * @see     https://developer.wordpress.org/reference/classes/_wp_editors/parse_settings/
 	 *
-	 * @todo    [next] (dev) WPML: `get_the_ID()`
-	 * @todo    [next] (feature) visual editor: rows
-	 * @todo    [maybe] (feature) optionally disable "multiple notes" feature (then save as `string` instead of `array`)?
-	 * @todo    [maybe] (dev) restyle; better desc
-	 * @todo    [maybe] (dev) nonce
+	 * @todo    (dev) WPML: `get_the_ID()`
+	 * @todo    (feature) visual editor: rows
+	 * @todo    (feature) optionally disable "multiple notes" feature (then save as `string` instead of `array`)?
+	 * @todo    (dev) restyle; better desc
+	 * @todo    (dev) nonce
 	 */
 	function display_meta_box( $private_or_public ) {
 		$id           = alg_wc_pn()->get_id( $private_or_public );
@@ -196,7 +200,8 @@ class Alg_WC_Product_Notes_Edit {
 					'<label for="' . $id . '_del_' . $note_id . '">' . __( 'Delete', 'product-notes-for-woocommerce' ) . '</label>' .
 					wc_help_tip( __( 'Check the box and "Update" product to delete.', 'product-notes-for-woocommerce' ) );
 			if ( '' != $formatted_time && '' != $author_name ) {
-				$html .= '<br><em><small>' . sprintf( __( 'last modified by %s on %s', 'product-notes-for-woocommerce' ), $author_name, $formatted_time ) . '</small></em>';
+				/* Translators: %1$s: Author name, %2$s: Formatted time. */
+				$html .= '<br><em><small>' . sprintf( __( 'last modified by %1$s on %2$s', 'product-notes-for-woocommerce' ), $author_name, $formatted_time ) . '</small></em>';
 			}
 		}
 		if ( ! $is_wp_editor ) {

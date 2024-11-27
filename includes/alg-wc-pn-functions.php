@@ -48,8 +48,8 @@ if ( ! function_exists( 'alg_wc_pn_has_product_notes' ) ) {
 	 * @version 2.2.0
 	 * @since   2.2.0
 	 *
-	 * @todo    [next] use it everywhere
-	 * @todo    [next] do we really need `function_exists( 'alg_wc_pn' )`?
+	 * @todo    (dev) use it everywhere
+	 * @todo    (dev) do we really need `function_exists( 'alg_wc_pn' )`?
 	 */
 	function alg_wc_pn_has_product_notes( $private_or_public, $product_id = 0 ) {
 		return ( function_exists( 'alg_wc_pn' ) && array() != alg_wc_pn()->core->get_product_note_values( $private_or_public, $product_id ) );
@@ -63,7 +63,7 @@ if ( ! function_exists( 'alg_wc_pn_get_product_notes' ) ) {
 	 * @version 2.7.0
 	 * @since   1.1.3
 	 *
-	 * @todo    [next] all notes for the **order**
+	 * @todo    (dev) all notes for the **order**
 	 */
 	function alg_wc_pn_get_product_notes( $private_or_public, $product_id = 0, $args = array() ) {
 		$notes = '';
@@ -81,7 +81,7 @@ if ( ! function_exists( 'alg_wc_product_notes_shortcode' ) ) {
 	 * @version 2.7.0
 	 * @since   1.1.3
 	 *
-	 * @todo    [next] (dev) use `$content`
+	 * @todo    (dev) use `$content`
 	 */
 	function alg_wc_product_notes_shortcode( $atts, $content = '' ) {
 		$atts = shortcode_atts( array(

@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Section Settings
  *
- * @version 2.9.5
+ * @version 3.1.0
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd
@@ -44,7 +44,7 @@ class Alg_WC_Product_Notes_Settings_Section {
 	 * @version 2.0.0
 	 * @since   1.0.0
 	 *
-	 * @todo    [next] code refactoring (i.e. `Alg_WC_Product_Notes_Settings_General`, separate functions, etc.)
+	 * @todo    (dev) code refactoring (i.e., `Alg_WC_Product_Notes_Settings_General`, separate functions, etc.)
 	 */
 	function __construct( $id, $desc, $private_or_public ) {
 		$this->id                = $id;
@@ -160,15 +160,15 @@ class Alg_WC_Product_Notes_Settings_Section {
 	/**
 	 * get_settings.
 	 *
-	 * @version 2.9.0
+	 * @version 3.1.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [maybe] (desc) `_order_item_meta`: "Same notes will be displayed even if the product will be removed, or notes updated."?
-	 * @todo    [maybe] Frontend Options: Single/Loop: add more hooks?
-	 * @todo    [maybe] Frontend Options: Single/Loop: different defaults (content, priority, etc.) per hook?
-	 * @todo    [next] WooCommerce PDF Invoices & Packing Slips: better desc, and maybe move to a new subsection, e.g. "Compatibility Options"
-	 * @todo    [next] store all settings in arrays by group, i.e. `alg_wc_pn_{$private_or_public}_product_tab_options[enabled]`, etc.
-	 * @todo    [maybe] Product meta: add "Position priority" option?
+	 * @todo    (desc) `_order_item_meta`: "Same notes will be displayed even if the product will be removed, or notes updated."?
+	 * @todo    (dev) Frontend Options: Single/Loop: add more hooks?
+	 * @todo    (dev) Frontend Options: Single/Loop: different defaults (content, priority, etc.) per hook?
+	 * @todo    (dev) WooCommerce PDF Invoices & Packing Slips: better desc, and maybe move to a new subsection, e.g., "Compatibility Options"
+	 * @todo    (dev) store all settings in arrays by group, i.e., `alg_wc_pn_{$private_or_public}_product_tab_options[enabled]`, etc.
+	 * @todo    (dev) Product meta: add "Position priority" option?
 	 */
 	function get_settings() {
 
@@ -261,7 +261,7 @@ class Alg_WC_Product_Notes_Settings_Section {
 				'type'     => 'checkbox',
 			),
 			array(
-				'desc'     => __( 'Tab priority (i.e. position)', 'product-notes-for-woocommerce' ),
+				'desc'     => __( 'Tab priority (i.e., position)', 'product-notes-for-woocommerce' ),
 				'id'       => "alg_wc_pn_{$private_or_public}_product_tab_priority",
 				'default'  => $default_tab_priority,
 				'type'     => 'number',
@@ -317,7 +317,7 @@ class Alg_WC_Product_Notes_Settings_Section {
 						'type'     => 'textarea',
 					),
 					array(
-						'desc'     => __( 'Priority (i.e. order inside the "Position")', 'product-notes-for-woocommerce' ),
+						'desc'     => __( 'Priority (i.e., order inside the "Position")', 'product-notes-for-woocommerce' ),
 						'desc_tip' => sprintf( __( 'Position: %s', 'product-notes-for-woocommerce' ), ( isset( $all_hooks[ $single_or_loop ][ $hook ] ) ? $all_hooks[ $single_or_loop ][ $hook ] : $hook ) ) . '<br><br>' .
 							( isset( $hooked_info[ $single_or_loop ][ $hook ] ) ? sprintf( __( 'Known priorities: %s', 'product-notes-for-woocommerce' ),
 								'<br>' . implode( '<br>', $hooked_info[ $single_or_loop ][ $hook ] ) ) : '' ),
@@ -343,6 +343,14 @@ class Alg_WC_Product_Notes_Settings_Section {
 				'desc'     => __( 'Enable', 'product-notes-for-woocommerce' ),
 				'desc_tip' => __( 'Show product notes in cart on frontend.', 'product-notes-for-woocommerce' ),
 				'id'       => "alg_wc_pn_{$private_or_public}_cart",
+				'default'  => 'no',
+				'type'     => 'checkbox',
+			),
+			array(
+				'title'    => __( 'Checkout', 'product-notes-for-woocommerce' ),
+				'desc'     => __( 'Enable', 'product-notes-for-woocommerce' ),
+				'desc_tip' => __( 'Show product notes in checkout on frontend.', 'product-notes-for-woocommerce' ),
+				'id'       => "alg_wc_pn_{$private_or_public}_checkout",
 				'default'  => 'no',
 				'type'     => 'checkbox',
 			),
@@ -475,7 +483,7 @@ class Alg_WC_Product_Notes_Settings_Section {
 			),
 			array(
 				'desc'     => __( 'JSON Search', 'product-notes-for-woocommerce' ),
-				'desc_tip' => __( 'This will also make products notes searchable in admin JSON, e.g. when searching for "Linked Products".', 'product-notes-for-woocommerce' ) . ' ' .
+				'desc_tip' => __( 'This will also make products notes searchable in admin JSON, e.g., when searching for "Linked Products".', 'product-notes-for-woocommerce' ) . ' ' .
 					__( '"Admin search" option must be enabled.', 'product-notes-for-woocommerce' ),
 				'id'       => "alg_wc_pn_{$private_or_public}_admin_search_json",
 				'default'  => 'no',
@@ -541,7 +549,7 @@ class Alg_WC_Product_Notes_Settings_Section {
 				'custom_attributes' => apply_filters( 'alg_wc_pn_settings', array( 'disabled' => 'disabled' ) ),
 			),
 			array(
-				'desc'     => sprintf( __( 'Comma separated list of PDF document template types to show product notes in, e.g. %s.', 'product-notes-for-woocommerce' ), '<code>invoice,packing-slip</code>' ) . ' ' .
+				'desc'     => sprintf( __( 'Comma separated list of PDF document template types to show product notes in, e.g., %s.', 'product-notes-for-woocommerce' ), '<code>invoice,packing-slip</code>' ) . ' ' .
 					__( 'Leave empty to show notes in all template types.', 'product-notes-for-woocommerce' ),
 				'id'       => "alg_wc_pn_{$private_or_public}_wpo_wcpdf_template_type",
 				'default'  => '',

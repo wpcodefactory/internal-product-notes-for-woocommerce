@@ -36,14 +36,14 @@ class Alg_WC_Product_Notes_Core {
 	 * @version 2.7.0
 	 * @since   1.0.0
 	 *
-	 * @todo    [next] (feature) add `[alg_wc_pn_translate]` shortcode (must apply `do_shortcode()` in the output then)
-	 * @todo    [next] [!] (dev) variations in backend: admin products list, export, import, quick edit, bulk edit?
-	 * @todo    [next] [!] (dev) variations in frontend (e.g. product tab)
-	 * @todo    [next] (feature) frontend search
-	 * @todo    [next] (feature) show in cart
-	 * @todo    [maybe] use custom post type for notes (i.e. instead of storing it in product meta)
-	 * @todo    [maybe] option to add notes to *customer* emails
-	 * @todo    [maybe] option to add notes to order details (e.g. "Order received" page)
+	 * @todo    (feature) add `[alg_wc_pn_translate]` shortcode (must apply `do_shortcode()` in the output then)
+	 * @todo    (dev) variations in backend: admin products list, export, import, quick edit, bulk edit?
+	 * @todo    (dev) variations in frontend (e.g., product tab)
+	 * @todo    (feature) frontend search
+	 * @todo    (feature) show in cart
+	 * @todo    (dev) use custom post type for notes (i.e., instead of storing it in product meta)
+	 * @todo    (dev) option to add notes to *customer* emails
+	 * @todo    (dev) option to add notes to order details (e.g., "Order received" page)
 	 */
 	function __construct() {
 		$this->wpml_use_default_language = ( 'yes' === get_option( 'alg_wc_pn_wpml_use_default_language_product_id', 'no' ) );
@@ -88,7 +88,7 @@ class Alg_WC_Product_Notes_Core {
 	 * @version 2.2.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [maybe] optional `check_empty`
+	 * @todo    (dev) optional `check_empty`
 	 */
 	function get_product_note_values( $private_or_public, $product_id = 0 ) {
 		$result = $this->get_product_notes( $private_or_public, $product_id );
@@ -176,8 +176,8 @@ class Alg_WC_Product_Notes_Core {
 	 * @see     https://wpml.org/documentation/support/creating-multilingual-wordpress-themes/language-dependent-ids/
 	 * @see     https://wpml.org/forums/topic/api-to-get-the-default-language/
 	 *
-	 * @todo    [next] (dev) WPML: search for `$product_id`, `$post_id`, `$variation_id` (and maybe `$id`)
-	 * @todo    [next] (dev) Polylang
+	 * @todo    (dev) WPML: search for `$product_id`, `$post_id`, `$variation_id` (and maybe `$id`)
+	 * @todo    (dev) Polylang
 	 */
 	function get_product_id( $product = false ) {
 		$product_id = ( $product ? $product->get_id() : get_the_ID() );

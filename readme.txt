@@ -1,9 +1,9 @@
-=== Product Notes for WooCommerce ===
+=== Product Notes Tab & Private Admin Notes for WooCommerce ===
 Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas
 Tags: woocommerce, product, product note, woo commerce
 Requires at least: 4.4
-Tested up to: 6.6
-Stable tag: 3.0.0
+Tested up to: 6.7
+Stable tag: 3.1.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -19,7 +19,7 @@ Add notes to WooCommerce products.
 * Add product notes **per variation**.
 * Make notes **public** or **private**.
 * Notes will be visible on **product edit page**.
-* Display the notes on **frontend** ("private" notes will be visible to admin and shop manager only): in new **product tab**, in single **product meta** section, on multiple additional positions on **single product** page, on **shop** (e.g. category) pages.
+* Display the notes on **frontend** ("private" notes will be visible to admin and shop manager only): in new **product tab**, in single **product meta** section, on multiple additional positions on **single product** page, on **shop** (e.g., category) pages.
 * And more...
 
 ### &#127942; Premium Version ###
@@ -50,6 +50,14 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 3. Start by visiting plugin settings at "WooCommerce > Settings > Product Notes".
 
 == Changelog ==
+
+= 3.1.0 - 27/11/2024 =
+* Dev - Frontend Options - "Checkout" option added.
+* Dev - Recommendations - Library updated.
+* Dev - Coding standards improved.
+* Tested up to: 6.7.
+* WC tested up to: 9.4.
+* Plugin name updated.
 
 = 3.0.0 - 28/10/2024 =
 * Dev - Plugin settings moved to the "WPFactory" menu.
@@ -132,7 +140,7 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 * Dev - Backend Options - "Visual editor" option added.
 
 = 2.5.0 - 17/08/2021 =
-* Fix - Backend Options - Admin search - Properly checking if it's admin (i.e. vs frontend) search query now.
+* Fix - Backend Options - Admin search - Properly checking if it's admin (i.e., vs frontend) search query now.
 * Dev - Backend Options - Admin orders - "Save in order items meta" option added.
 * Dev - General Options - "Note per variation" option added.
 * Dev - Frontend Options - "Variation description" option added.
@@ -147,7 +155,7 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 * WC tested up to: 5.5.
 
 = 2.3.1 - 21/03/2021 =
-* Dev - Sanitization - When saving, notes are sanitized as a standard `textarea` field in WooCommerce settings now (was `sanitize_textarea_field()`). This allows more HTML tags to be saved, e.g. `<img>`, etc.
+* Dev - Sanitization - When saving, notes are sanitized as a standard `textarea` field in WooCommerce settings now (was `sanitize_textarea_field()`). This allows more HTML tags to be saved, e.g., `<img>`, etc.
 * Dev - Sanitization - Settings - Frontend Options - Product tab - Tab content - Sanitized as a standard `textarea` field in WooCommerce settings now (was "raw").
 * Dev - Sanitization - Settings - Frontend Options - Product tab - Notes glue - Sanitized with `wp_kses_post()` now (was "raw").
 * Tested up to: 5.7.
@@ -209,7 +217,7 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 
 = 1.3.1 - 09/03/2020 =
 * Dev - Bulk and Quick edit added.
-* Dev - Products column - Using filter param to get product ID now (i.e. instead of `get_the_ID()`).
+* Dev - Products column - Using filter param to get product ID now (i.e., instead of `get_the_ID()`).
 
 = 1.3.0 - 23/02/2020 =
 * Dev - "Admin search" options added.
@@ -245,7 +253,7 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 * Fix - "Note added" time now updated only if note content was changed.
 * Fix - Reset Settings - "Reset section settings" option fixed.
 * Dev - "Note added" time now shown only if note content is not empty.
-* Dev - Product tab - Changing double line-breaks in the text into HTML paragraphs (i.e. applying `wpautop()`).
+* Dev - Product tab - Changing double line-breaks in the text into HTML paragraphs (i.e., applying `wpautop()`).
 * Dev - Style Options - "Textarea style" option added.
 * Dev - Admin settings restyled and descriptions updated.
 * Dev - "WC tested up to" updated.

@@ -60,8 +60,8 @@ class Alg_WC_Product_Notes_Settings_Advanced {
 	 * @version 2.9.0
 	 * @since   2.6.0
 	 *
-	 * @todo    [next] (dev) Formatting Options: `admin_search_json` (will have to check `admin_search` as well)
-	 * @todo    [next] (desc) Formatting Options: better desc?
+	 * @todo    (dev) Formatting Options: `admin_search_json` (will have to check `admin_search` as well)
+	 * @todo    (desc) Formatting Options: better desc?
 	 */
 	function get_settings() {
 

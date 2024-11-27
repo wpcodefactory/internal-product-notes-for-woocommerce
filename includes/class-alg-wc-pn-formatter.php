@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Formatter Class
  *
- * @version 2.9.0
+ * @version 3.1.0
  * @since   2.7.0
  *
  * @author  Algoritmika Ltd
@@ -27,7 +27,7 @@ class Alg_WC_Product_Notes_Formatter {
 	/**
 	 * get_default_args.
 	 *
-	 * @version 2.9.0
+	 * @version 3.1.0
 	 * @since   2.7.0
 	 */
 	function get_default_args( $type ) {
@@ -69,6 +69,7 @@ class Alg_WC_Product_Notes_Formatter {
 					'content'        => '<p>%product_notes%</p>',
 				);
 			case 'cart':
+			case 'checkout':
 				return array(
 					'do_esc_html'    => 'no',
 					'do_shortcode'   => 'no',
@@ -135,8 +136,8 @@ class Alg_WC_Product_Notes_Formatter {
 	 * @version 2.7.0
 	 * @since   2.7.0
 	 *
-	 * @todo    [next] (feature) process images (i.e. similar to `make_clickable()`)
-	 * @todo    [maybe] (feature) `$do_strip_tags`
+	 * @todo    (feature) process images (i.e., similar to `make_clickable()`)
+	 * @todo    (feature) `$do_strip_tags`
 	 */
 	function get_args( $private_or_public, $type ) {
 		$id      = ( 'product_tab' === $type ? "alg_wc_pn_{$private_or_public}_product_tab_options" : "alg_wc_pn_{$private_or_public}_{$type}_formatting_options" );

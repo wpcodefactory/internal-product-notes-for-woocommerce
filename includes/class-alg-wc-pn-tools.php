@@ -28,8 +28,8 @@ class Alg_WC_Product_Notes_Tools {
 	 * @version 2.0.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (feature) export/import all product notes
-	 * @todo    [next] (feature) add (same) note to all products
+	 * @todo    (feature) export/import all product notes
+	 * @todo    (feature) add (same) note to all products
 	 */
 	function __construct() {
 		add_action( 'alg_wc_product_note_settings_after_save', array( $this, 'delete_all_notes' ) );
@@ -62,6 +62,7 @@ class Alg_WC_Product_Notes_Tools {
 	 */
 	function admin_notices_delete_all_notes() {
 		echo '<div class="notice notice-success is-dismissible"><p><strong>' .
+			/* Translators: %d: Number of products. */
 			sprintf( __( 'All notes have been deleted for %d product(s).', 'product-notes-for-woocommerce' ), $this->notice_data['deleted'] ) .
 		'</strong></p></div>';
 	}

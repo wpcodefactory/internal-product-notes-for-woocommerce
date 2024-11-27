@@ -1,4 +1,4 @@
-#: includes/class-alg-wc-pn-core.php:67 includes/class-alg-wc-pn-edit.php:46
+#: includes/class-alg-wc-pn-core.php:67 includes/class-alg-wc-pn-edit.php:49
 #: includes/pro/class-alg-wc-pn-display-backend.php:158
 msgid "Private note"
 msgid_plural "Private notes"
@@ -11,54 +11,54 @@ msgid_plural "Public notes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/class-alg-wc-pn-display-frontend.php:271
-#: includes/class-alg-wc-pn-edit.php:214
+#: includes/class-alg-wc-pn-display-frontend.php:297
+#: includes/class-alg-wc-pn-edit.php:219
 #: includes/settings/class-alg-wc-pn-settings-section.php:180
 #: includes/settings/class-alg-wc-pn-settings-section.php:182
 #: includes/settings/class-alg-wc-pn-settings.php:31
 msgid "Private notes"
 msgstr ""
 
-#: includes/class-alg-wc-pn-display-frontend.php:271
-#: includes/class-alg-wc-pn-edit.php:214
+#: includes/class-alg-wc-pn-display-frontend.php:297
+#: includes/class-alg-wc-pn-edit.php:219
 #: includes/settings/class-alg-wc-pn-settings-section.php:190
 msgid "Notes"
 msgstr ""
 
-#: includes/class-alg-wc-pn-edit.php:46
+#: includes/class-alg-wc-pn-edit.php:49
 #: includes/pro/class-alg-wc-pn-display-backend.php:160
 msgid "Note"
 msgstr ""
 
-#: includes/class-alg-wc-pn-edit.php:60
+#: includes/class-alg-wc-pn-edit.php:64
 #, php-format
-msgid "Last modified by %s on %s."
+msgid "Last modified by %1$s on %2$s."
 msgstr ""
 
-#: includes/class-alg-wc-pn-edit.php:127 includes/class-alg-wc-pn-edit.php:196
-#: includes/settings/class-alg-wc-pn-settings-section.php:615
-#: includes/settings/class-alg-wc-pn-settings-section.php:632
+#: includes/class-alg-wc-pn-edit.php:131 includes/class-alg-wc-pn-edit.php:200
+#: includes/settings/class-alg-wc-pn-settings-section.php:623
+#: includes/settings/class-alg-wc-pn-settings-section.php:640
 msgid "Delete"
 msgstr ""
 
-#: includes/class-alg-wc-pn-edit.php:197
+#: includes/class-alg-wc-pn-edit.php:201
 msgid "Check the box and \"Update\" product to delete."
 msgstr ""
 
-#: includes/class-alg-wc-pn-edit.php:199
+#: includes/class-alg-wc-pn-edit.php:204
 #, php-format
-msgid "last modified by %s on %s"
+msgid "last modified by %1$s on %2$s"
 msgstr ""
 
-#: includes/class-alg-wc-pn-edit.php:208
+#: includes/class-alg-wc-pn-edit.php:213
 msgid "Add new note"
 msgstr ""
 
-#: includes/class-alg-wc-pn-edit.php:219
+#: includes/class-alg-wc-pn-edit.php:224
 msgid "Tab title:"
 msgstr ""
 
-#: includes/class-alg-wc-pn-tools.php:65
+#: includes/class-alg-wc-pn-tools.php:66
 #, php-format
 msgid "All notes have been deleted for %d product(s)."
 msgstr ""
@@ -87,7 +87,7 @@ msgid "Public Product Note"
 msgstr ""
 
 #: includes/pro/class-alg-wc-pn-compatibility.php:155
-#: includes/settings/class-alg-wc-pn-settings-section.php:585
+#: includes/settings/class-alg-wc-pn-settings-section.php:593
 msgid "Enter some product notes..."
 msgstr ""
 
@@ -181,33 +181,33 @@ msgid "Cart"
 msgstr ""
 
 #: includes/settings/class-alg-wc-pn-settings-advanced.php:103
-#: includes/settings/class-alg-wc-pn-settings-section.php:414
+#: includes/settings/class-alg-wc-pn-settings-section.php:422
 msgid "Admin products list column"
 msgstr ""
 
 #: includes/settings/class-alg-wc-pn-settings-advanced.php:104
-#: includes/settings/class-alg-wc-pn-settings-section.php:423
+#: includes/settings/class-alg-wc-pn-settings-section.php:431
 msgid "Admin orders"
 msgstr ""
 
 #: includes/settings/class-alg-wc-pn-settings-advanced.php:105
-#: includes/settings/class-alg-wc-pn-settings-section.php:444
+#: includes/settings/class-alg-wc-pn-settings-section.php:452
 msgid "Admin emails"
 msgstr ""
 
 #: includes/settings/class-alg-wc-pn-settings-advanced.php:106
-#: includes/settings/class-alg-wc-pn-settings-section.php:456
+#: includes/settings/class-alg-wc-pn-settings-section.php:464
 msgid "Customer emails"
 msgstr ""
 
 #: includes/settings/class-alg-wc-pn-settings-advanced.php:107
-#: includes/settings/class-alg-wc-pn-settings-section.php:486
+#: includes/settings/class-alg-wc-pn-settings-section.php:494
 msgid "Export"
 msgstr ""
 
 #: includes/settings/class-alg-wc-pn-settings-advanced.php:108
-#: includes/settings/class-alg-wc-pn-settings-section.php:533
-#: includes/settings/class-alg-wc-pn-settings-section.php:537
+#: includes/settings/class-alg-wc-pn-settings-section.php:541
+#: includes/settings/class-alg-wc-pn-settings-section.php:545
 msgid "WooCommerce PDF Invoices & Packing Slips"
 msgstr ""
 
@@ -387,19 +387,20 @@ msgstr ""
 #: includes/settings/class-alg-wc-pn-settings-section.php:293
 #: includes/settings/class-alg-wc-pn-settings-section.php:336
 #: includes/settings/class-alg-wc-pn-settings-section.php:343
-#: includes/settings/class-alg-wc-pn-settings-section.php:354
-#: includes/settings/class-alg-wc-pn-settings-section.php:415
-#: includes/settings/class-alg-wc-pn-settings-section.php:424
-#: includes/settings/class-alg-wc-pn-settings-section.php:445
-#: includes/settings/class-alg-wc-pn-settings-section.php:457
-#: includes/settings/class-alg-wc-pn-settings-section.php:469
-#: includes/settings/class-alg-wc-pn-settings-section.php:487
-#: includes/settings/class-alg-wc-pn-settings-section.php:496
-#: includes/settings/class-alg-wc-pn-settings-section.php:505
-#: includes/settings/class-alg-wc-pn-settings-section.php:514
-#: includes/settings/class-alg-wc-pn-settings-section.php:534
-#: includes/settings/class-alg-wc-pn-settings-section.php:553
-#: includes/settings/class-alg-wc-pn-settings-section.php:565
+#: includes/settings/class-alg-wc-pn-settings-section.php:351
+#: includes/settings/class-alg-wc-pn-settings-section.php:362
+#: includes/settings/class-alg-wc-pn-settings-section.php:423
+#: includes/settings/class-alg-wc-pn-settings-section.php:432
+#: includes/settings/class-alg-wc-pn-settings-section.php:453
+#: includes/settings/class-alg-wc-pn-settings-section.php:465
+#: includes/settings/class-alg-wc-pn-settings-section.php:477
+#: includes/settings/class-alg-wc-pn-settings-section.php:495
+#: includes/settings/class-alg-wc-pn-settings-section.php:504
+#: includes/settings/class-alg-wc-pn-settings-section.php:513
+#: includes/settings/class-alg-wc-pn-settings-section.php:522
+#: includes/settings/class-alg-wc-pn-settings-section.php:542
+#: includes/settings/class-alg-wc-pn-settings-section.php:561
+#: includes/settings/class-alg-wc-pn-settings-section.php:573
 msgid "Enable"
 msgstr ""
 
@@ -420,7 +421,7 @@ msgid "Tab title per product"
 msgstr ""
 
 #: includes/settings/class-alg-wc-pn-settings-section.php:264
-msgid "Tab priority (i.e. position)"
+msgid "Tab priority (i.e., position)"
 msgstr ""
 
 #: includes/settings/class-alg-wc-pn-settings-section.php:272
@@ -459,7 +460,7 @@ msgid "Position: %s"
 msgstr ""
 
 #: includes/settings/class-alg-wc-pn-settings-section.php:320
-msgid "Priority (i.e. order inside the \"Position\")"
+msgid "Priority (i.e., order inside the \"Position\")"
 msgstr ""
 
 #: includes/settings/class-alg-wc-pn-settings-section.php:322
@@ -480,230 +481,238 @@ msgstr ""
 msgid "Show product notes in cart on frontend."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:353
+#: includes/settings/class-alg-wc-pn-settings-section.php:350
+msgid "Checkout"
+msgstr ""
+
+#: includes/settings/class-alg-wc-pn-settings-section.php:352
+msgid "Show product notes in checkout on frontend."
+msgstr ""
+
+#: includes/settings/class-alg-wc-pn-settings-section.php:361
 msgid "Logged users only"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:355
+#: includes/settings/class-alg-wc-pn-settings-section.php:363
 msgid "Show public product notes to logged in users only."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:371
+#: includes/settings/class-alg-wc-pn-settings-section.php:379
 msgid "Backend Options"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:378
-#: includes/settings/class-alg-wc-pn-settings-section.php:399
-#: includes/settings/class-alg-wc-pn-settings-section.php:408
+#: includes/settings/class-alg-wc-pn-settings-section.php:386
+#: includes/settings/class-alg-wc-pn-settings-section.php:407
+#: includes/settings/class-alg-wc-pn-settings-section.php:416
 msgid "Visual editor"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:379
+#: includes/settings/class-alg-wc-pn-settings-section.php:387
 msgid "Use visual editor in product notes."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:380
-#: includes/settings/class-alg-wc-pn-settings-section.php:396
-#: includes/settings/class-alg-wc-pn-settings-section.php:399
+#: includes/settings/class-alg-wc-pn-settings-section.php:388
+#: includes/settings/class-alg-wc-pn-settings-section.php:404
+#: includes/settings/class-alg-wc-pn-settings-section.php:407
 msgid "Product notes"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:387
+#: includes/settings/class-alg-wc-pn-settings-section.php:395
 msgid "Use <em>simplified</em> visual editor in variation notes."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:388
-#: includes/settings/class-alg-wc-pn-settings-section.php:405
-#: includes/settings/class-alg-wc-pn-settings-section.php:408
+#: includes/settings/class-alg-wc-pn-settings-section.php:396
+#: includes/settings/class-alg-wc-pn-settings-section.php:413
+#: includes/settings/class-alg-wc-pn-settings-section.php:416
 msgid "Variation notes"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:395
+#: includes/settings/class-alg-wc-pn-settings-section.php:403
 msgid "Textarea style"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:397
+#: includes/settings/class-alg-wc-pn-settings-section.php:405
 msgid "Styling for the textarea input on product's admin edit page."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:398
-#: includes/settings/class-alg-wc-pn-settings-section.php:407
+#: includes/settings/class-alg-wc-pn-settings-section.php:406
+#: includes/settings/class-alg-wc-pn-settings-section.php:415
 #, php-format
 msgid "Ignored if \"%s > %s\" option is enabled."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:406
+#: includes/settings/class-alg-wc-pn-settings-section.php:414
 msgid "Styling for the textarea input on variation's admin edit page."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:416
+#: includes/settings/class-alg-wc-pn-settings-section.php:424
 msgid "Show product notes in admin products list column."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:425
+#: includes/settings/class-alg-wc-pn-settings-section.php:433
 msgid "Show product notes in admin orders."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:433
+#: includes/settings/class-alg-wc-pn-settings-section.php:441
 msgid "Save in order items meta"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:434
+#: includes/settings/class-alg-wc-pn-settings-section.php:442
 msgid "Will save notes in new order items."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:435
+#: includes/settings/class-alg-wc-pn-settings-section.php:443
 msgid "And you will be able to edit notes on admin order page."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:436
+#: includes/settings/class-alg-wc-pn-settings-section.php:444
 #, php-format
 msgid "Item meta key: %s"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:446
+#: includes/settings/class-alg-wc-pn-settings-section.php:454
 msgid "Show product notes in admin order emails."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:458
+#: includes/settings/class-alg-wc-pn-settings-section.php:466
 msgid "Show product notes in customer order emails."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:468
+#: includes/settings/class-alg-wc-pn-settings-section.php:476
 msgid "Admin search"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:470
+#: includes/settings/class-alg-wc-pn-settings-section.php:478
 msgid "Make product notes searchable by admin."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:477
+#: includes/settings/class-alg-wc-pn-settings-section.php:485
 msgid "JSON Search"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:478
+#: includes/settings/class-alg-wc-pn-settings-section.php:486
 msgid ""
-"This will also make products notes searchable in admin JSON, e.g. when "
+"This will also make products notes searchable in admin JSON, e.g., when "
 "searching for \"Linked Products\"."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:479
+#: includes/settings/class-alg-wc-pn-settings-section.php:487
 msgid "\"Admin search\" option must be enabled."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:488
+#: includes/settings/class-alg-wc-pn-settings-section.php:496
 msgid "Make product notes exportable in \"Products > Export\"."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:495
+#: includes/settings/class-alg-wc-pn-settings-section.php:503
 msgid "Import"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:497
+#: includes/settings/class-alg-wc-pn-settings-section.php:505
 msgid "Make product notes importable in \"Products > Import\"."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:504
+#: includes/settings/class-alg-wc-pn-settings-section.php:512
 msgid "Quick edit"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:506
+#: includes/settings/class-alg-wc-pn-settings-section.php:514
 msgid "Make product notes editable in \"Quick Edit\"."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:513
+#: includes/settings/class-alg-wc-pn-settings-section.php:521
 msgid "Bulk edit"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:515
+#: includes/settings/class-alg-wc-pn-settings-section.php:523
 msgid "Make product notes editable in \"Bulk Actions > Edit\"."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:526
+#: includes/settings/class-alg-wc-pn-settings-section.php:534
 msgid "Compatibility Options"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:535
+#: includes/settings/class-alg-wc-pn-settings-section.php:543
 #, php-format
 msgid "Show product notes in PDF documents from the %s plugin."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:544
+#: includes/settings/class-alg-wc-pn-settings-section.php:552
 #, php-format
 msgid ""
 "Comma separated list of PDF document template types to show product notes "
-"in, e.g. %s."
+"in, e.g., %s."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:545
+#: includes/settings/class-alg-wc-pn-settings-section.php:553
 msgid "Leave empty to show notes in all template types."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:552
-#: includes/settings/class-alg-wc-pn-settings-section.php:556
+#: includes/settings/class-alg-wc-pn-settings-section.php:560
+#: includes/settings/class-alg-wc-pn-settings-section.php:564
 msgid "Product/Review CSV Import Export"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:554
+#: includes/settings/class-alg-wc-pn-settings-section.php:562
 #, php-format
 msgid "Make product notes importable in the %s plugin (by %s)."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:564
-#: includes/settings/class-alg-wc-pn-settings-section.php:568
+#: includes/settings/class-alg-wc-pn-settings-section.php:572
+#: includes/settings/class-alg-wc-pn-settings-section.php:576
 msgid "Dokan"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:566
+#: includes/settings/class-alg-wc-pn-settings-section.php:574
 #, php-format
 msgid "Show product notes in vendor product form from the %s plugin."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:575
+#: includes/settings/class-alg-wc-pn-settings-section.php:583
 msgid "Title"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:583
+#: includes/settings/class-alg-wc-pn-settings-section.php:591
 msgid "Textarea placeholder"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:591
+#: includes/settings/class-alg-wc-pn-settings-section.php:599
 msgid "Textarea rows"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:605
+#: includes/settings/class-alg-wc-pn-settings-section.php:613
 msgid "Tools"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:606
+#: includes/settings/class-alg-wc-pn-settings-section.php:614
 msgid "Check the box and save changes to run the tool."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:607
+#: includes/settings/class-alg-wc-pn-settings-section.php:615
 msgid "Please note that there is no undo for these tools."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:614
+#: includes/settings/class-alg-wc-pn-settings-section.php:622
 msgid "Products"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:616
+#: includes/settings/class-alg-wc-pn-settings-section.php:624
 msgid "Deletes all notes for all products."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:622
+#: includes/settings/class-alg-wc-pn-settings-section.php:630
 msgid "Orders"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:623
+#: includes/settings/class-alg-wc-pn-settings-section.php:631
 msgid "Add"
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:624
+#: includes/settings/class-alg-wc-pn-settings-section.php:632
 msgid "Adds product notes to all orders items meta."
 msgstr ""
 
-#: includes/settings/class-alg-wc-pn-settings-section.php:633
+#: includes/settings/class-alg-wc-pn-settings-section.php:641
 msgid "Deletes all products notes from all orders items meta."
 msgstr ""
 
