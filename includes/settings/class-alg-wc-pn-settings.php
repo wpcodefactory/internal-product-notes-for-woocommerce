@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Settings
  *
- * @version 2.6.0
+ * @version 3.1.1
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd
@@ -17,7 +17,7 @@ class Alg_WC_Product_Notes_Settings extends WC_Settings_Page {
 	/**
 	 * Constructor.
 	 *
-	 * @version 2.6.0
+	 * @version 3.1.1
 	 * @since   1.0.0
 	 */
 	function __construct() {
@@ -26,12 +26,12 @@ class Alg_WC_Product_Notes_Settings extends WC_Settings_Page {
 		parent::__construct();
 		add_filter( 'woocommerce_admin_settings_sanitize_option', array( $this, 'sanitize_custom' ), PHP_INT_MAX, 3 );
 		// Sections
-		require_once( 'class-alg-wc-pn-settings-section.php' );
+		require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-pn-settings-section.php';
 		$sections = array(
 			'private' => new Alg_WC_Product_Notes_Settings_Section( '',             __( 'Private notes', 'product-notes-for-woocommerce' ), 'private' ),
 			'public'  => new Alg_WC_Product_Notes_Settings_Section( 'public_notes', __( 'Public notes', 'product-notes-for-woocommerce' ),  'public' ),
 		);
-		$sections['advanced'] = require_once( 'class-alg-wc-pn-settings-advanced.php' );
+		$sections['advanced'] = require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-pn-settings-advanced.php';
 	}
 
 	/**

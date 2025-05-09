@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Core Class
  *
- * @version 2.9.5
+ * @version 3.1.1
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd
@@ -33,7 +33,7 @@ class Alg_WC_Product_Notes_Core {
 	/**
 	 * Constructor.
 	 *
-	 * @version 2.7.0
+	 * @version 3.1.1
 	 * @since   1.0.0
 	 *
 	 * @todo    (feature) add `[alg_wc_pn_translate]` shortcode (must apply `do_shortcode()` in the output then)
@@ -46,13 +46,18 @@ class Alg_WC_Product_Notes_Core {
 	 * @todo    (dev) option to add notes to order details (e.g., "Order received" page)
 	 */
 	function __construct() {
+
 		$this->wpml_use_default_language = ( 'yes' === get_option( 'alg_wc_pn_wpml_use_default_language_product_id', 'no' ) );
-		$this->formatter = require_once( 'class-alg-wc-pn-formatter.php' );
-		require_once( 'alg-wc-pn-functions.php' );
-		require_once( 'class-alg-wc-pn-edit.php' );
-		require_once( 'class-alg-wc-pn-display-frontend.php' );
-		require_once( 'class-alg-wc-pn-tools.php' );
+
+		$this->formatter = require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-pn-formatter.php';
+
+		require_once plugin_dir_path( __FILE__ ) . 'alg-wc-pn-functions.php';
+		require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-pn-edit.php';
+		require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-pn-display-frontend.php';
+		require_once plugin_dir_path( __FILE__ ) . 'class-alg-wc-pn-tools.php';
+
 		do_action( 'alg_wc_pn_core_loaded', $this );
+
 	}
 
 	/**

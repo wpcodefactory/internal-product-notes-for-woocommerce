@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Main Class
  *
- * @version 3.0.0
+ * @version 3.1.1
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd
@@ -37,7 +37,7 @@ final class Alg_WC_Product_Notes {
 	protected static $_instance = null;
 
 	/**
-	 * Main Alg_WC_Product_Notes Instance
+	 * Main Alg_WC_Product_Notes Instance.
 	 *
 	 * Ensures only one instance of Alg_WC_Product_Notes is loaded or can be loaded.
 	 *
@@ -119,12 +119,17 @@ final class Alg_WC_Product_Notes {
 	 */
 	function wc_declare_compatibility() {
 		if ( class_exists( '\Automattic\WooCommerce\Utilities\FeaturesUtil' ) ) {
-			$files = ( defined( 'ALG_WC_PRODUCT_NOTES_FILE_FREE' ) ?
+			$files = (
+				defined( 'ALG_WC_PRODUCT_NOTES_FILE_FREE' ) ?
 				array( ALG_WC_PRODUCT_NOTES_FILE, ALG_WC_PRODUCT_NOTES_FILE_FREE ) :
 				array( ALG_WC_PRODUCT_NOTES_FILE )
 			);
 			foreach ( $files as $file ) {
-				\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', $file, true );
+				\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility(
+					'custom_order_tables',
+					$file,
+					true
+				);
 			}
 		}
 	}
@@ -142,19 +147,22 @@ final class Alg_WC_Product_Notes {
 	/**
 	 * admin.
 	 *
-	 * @version 3.0.0
+	 * @version 3.1.1
 	 * @since   1.0.0
 	 */
 	function admin() {
 
 		// Action links
-		add_filter( 'plugin_action_links_' . plugin_basename( ALG_WC_PRODUCT_NOTES_FILE ), array( $this, 'action_links' ) );
+		add_filter(
+			'plugin_action_links_' . plugin_basename( ALG_WC_PRODUCT_NOTES_FILE ),
+			array( $this, 'action_links' )
+		);
 
 		// "Recommendations" page
-		$this->add_cross_selling_library();
+		add_action( 'init', array( $this, 'add_cross_selling_library' ) );
 
 		// WC Settings tab as WPFactory submenu item
-		$this->move_wc_settings_tab_to_wpfactory_menu();
+		add_action( 'init', array( $this, 'move_wc_settings_tab_to_wpfactory_menu' ) );
 
 		// Settings
 		add_filter( 'woocommerce_get_settings_pages', array( $this, 'add_woocommerce_settings_tab' ) );
@@ -177,14 +185,17 @@ final class Alg_WC_Product_Notes {
 	 */
 	function action_links( $links ) {
 		$custom_links = array();
+
 		$custom_links[] = '<a href="' . admin_url( 'admin.php?page=wc-settings&tab=alg_wc_product_notes' ) . '">' .
 			__( 'Settings', 'product-notes-for-woocommerce' ) .
 		'</a>';
+
 		if ( 'internal-product-notes-for-woocommerce.php' === basename( ALG_WC_PRODUCT_NOTES_FILE ) ) {
 			$custom_links[] = '<a target="_blank" style="font-weight: bold; color: green;" href="https://wpfactory.com/item/product-notes-for-woocommerce/">' .
 				__( 'Go Pro', 'product-notes-for-woocommerce' ) .
 			'</a>';
 		}
+
 		return array_merge( $custom_links, $links );
 	}
 

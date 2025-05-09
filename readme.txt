@@ -2,8 +2,8 @@
 Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas
 Tags: woocommerce, product, product note, woo commerce
 Requires at least: 4.4
-Tested up to: 6.7
-Stable tag: 3.1.0
+Tested up to: 6.8
+Stable tag: 3.1.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -51,12 +51,20 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 
 == Changelog ==
 
+= 3.1.1 - 09/05/2025 =
+* Fix - Translation loading fixed.
+* Dev - Security - Shortcodes - Output escaped.
+* Dev - Key Manager - Library updated.
+* Dev - Code refactoring.
+* WC tested up to: 9.8.
+* Tested up to: 6.8.
+
 = 3.1.0 - 27/11/2024 =
 * Dev - Frontend Options - "Checkout" option added.
 * Dev - Recommendations - Library updated.
 * Dev - Coding standards improved.
-* Tested up to: 6.7.
 * WC tested up to: 9.4.
+* Tested up to: 6.7.
 * Plugin name updated.
 
 = 3.0.0 - 28/10/2024 =
@@ -144,8 +152,8 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 * Dev - Backend Options - Admin orders - "Save in order items meta" option added.
 * Dev - General Options - "Note per variation" option added.
 * Dev - Frontend Options - "Variation description" option added.
-* Tested up to: 5.8.
 * WC tested up to: 5.6.
+* Tested up to: 5.8.
 
 = 2.4.0 - 15/07/2021 =
 * Dev - "Dokan" plugin compatibility options added.
@@ -158,8 +166,8 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 * Dev - Sanitization - When saving, notes are sanitized as a standard `textarea` field in WooCommerce settings now (was `sanitize_textarea_field()`). This allows more HTML tags to be saved, e.g., `<img>`, etc.
 * Dev - Sanitization - Settings - Frontend Options - Product tab - Tab content - Sanitized as a standard `textarea` field in WooCommerce settings now (was "raw").
 * Dev - Sanitization - Settings - Frontend Options - Product tab - Notes glue - Sanitized with `wp_kses_post()` now (was "raw").
-* Tested up to: 5.7.
 * WC tested up to: 5.1.
+* Tested up to: 5.7.
 
 = 2.3.0 - 02/03/2021 =
 * Dev - Frontend Options - "Single product page" and "Shop pages" sections added.
@@ -212,8 +220,8 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 * Dev - Admin settings descriptions updated.
 * Dev - Plugin renamed to "Product Notes for WooCommerce".
 * Dev - Text domain changed to `product-notes-for-woocommerce`.
-* Tested up to: 5.4.
 * WC tested up to: 4.3.
+* Tested up to: 5.4.
 
 = 1.3.1 - 09/03/2020 =
 * Dev - Bulk and Quick edit added.
