@@ -1,9 +1,9 @@
 === Product Notes Tab & Private Admin Notes for WooCommerce ===
-Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas
+Contributors: wpcodefactory, anbinder, karzin, omardabbas
 Tags: woocommerce, product, product note, woo commerce
 Requires at least: 4.4
 Tested up to: 6.8
-Stable tag: 3.1.1
+Stable tag: 3.1.2
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -50,6 +50,9 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 3. Start by visiting plugin settings at "WooCommerce > Settings > Product Notes".
 
 == Changelog ==
+
+= 3.1.2 - 12/09/2025 =
+* WC tested up to: 10.1.
 
 = 3.1.1 - 09/05/2025 =
 * Fix - Translation loading fixed.
