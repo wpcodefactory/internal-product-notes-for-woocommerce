@@ -1,9 +1,9 @@
 === Product Notes Tab & Private Admin Notes for WooCommerce ===
 Contributors: wpcodefactory, anbinder, karzin, omardabbas
 Tags: woocommerce, product, product note, woo commerce
-Requires at least: 4.4
-Tested up to: 7.0
-Stable tag: 3.1.3
+Requires at least: 4.8
+Tested up to: 7.1
+Stable tag: 3.2.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -50,6 +50,20 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 3. Start by visiting plugin settings at "WooCommerce > Settings > Product Notes".
 
 == Changelog ==
+
+= 3.2.0 - 09/09/2026 =
+* Dev - Security - Output escaped.
+* Dev - Security - Input sanitized.
+* Dev - Security - Nonces added.
+* Dev - Security - SQL queries prepared.
+* Dev - Coding standards improved.
+* Dev - Code refactoring.
+* Dev - WPFactory Admin Menu - Library updated (to v1.1.2).
+* Dev - WPFactory Cross-Selling - Library updated (to v1.1.5).
+* Dev - WPFactory Key Manager - Library updated (to v1.1.1).
+* Tested up to: 7.1.
+* WC tested up to: 11.1.
+* Requires at least: 4.8.
 
 = 3.1.3 - 23/05/2026 =
 * Tested up to: 7.0.
@@ -132,7 +146,7 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 * Fix - Backend Options - Customer emails - The option was incorrectly marked as a non-Pro. This is fixed now.
 * Dev - Backend Options - "Visual editor" and "Textarea style" options added for the variation notes.
 * Dev - Advanced - "Formatting Options" subsection added (Process shortcodes, Escape HTML, Replace line breaks, Convert plaintext URI to HTML links, Notes glue, Content).
-* Dev - Frontend Options - Product tab - Formating options moved to "Advanced > Formatting Options".
+* Dev - Frontend Options - Product tab - Formatting options moved to "Advanced > Formatting Options".
 * Dev - Notes glue - Now defaults to `<br>` (was `PHP_EOL`) (including admin orders and shortcode).
 * Dev - `content` parameter added (defaults to `%product_notes%`) (including shortcode).
 * Dev - `do_shortcode` parameter added (defaults to `false`) (including shortcode).

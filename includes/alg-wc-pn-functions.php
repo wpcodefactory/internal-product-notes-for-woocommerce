@@ -2,17 +2,19 @@
 /**
  * Product Notes for WooCommerce - Functions
  *
- * @version 3.1.1
+ * @version 3.2.0
  * @since   1.1.3
  *
- * @author  Algoritmika Ltd
+ * @author WPFactory
+ *
+ * @package WPFactory\WC_Product_Notes
  */
 
 defined( 'ABSPATH' ) || exit;
 
 if ( ! function_exists( 'alg_wc_pn_get_enabled_sections' ) ) {
 	/**
-	 * alg_wc_pn_get_enabled_sections.
+	 * Get enabled sections.
 	 *
 	 * @version 2.0.0
 	 * @since   2.0.0
@@ -30,7 +32,7 @@ if ( ! function_exists( 'alg_wc_pn_get_enabled_sections' ) ) {
 
 if ( ! function_exists( 'alg_wc_pn_is_any_section_enabled' ) ) {
 	/**
-	 * alg_wc_pn_is_any_section_enabled.
+	 * Check if any section is enabled.
 	 *
 	 * @version 2.0.0
 	 * @since   2.0.0
@@ -43,18 +45,21 @@ if ( ! function_exists( 'alg_wc_pn_is_any_section_enabled' ) ) {
 
 if ( ! function_exists( 'alg_wc_pn_has_product_notes' ) ) {
 	/**
-	 * alg_wc_pn_has_product_notes.
+	 * Check if a product has notes.
 	 *
-	 * @version 2.2.0
+	 * @version 3.2.0
 	 * @since   2.2.0
 	 *
-	 * @todo    (dev) use it everywhere
-	 * @todo    (dev) do we really need `function_exists( 'alg_wc_pn' )`?
+	 * @param string $private_or_public Private or public.
+	 * @param int    $product_id Product ID.
+	 *
+	 * @todo (dev) use it everywhere
+	 * @todo (dev) do we really need `function_exists( 'alg_wc_pn' )`?
 	 */
 	function alg_wc_pn_has_product_notes( $private_or_public, $product_id = 0 ) {
 		return (
 			function_exists( 'alg_wc_pn' ) &&
-			array() != alg_wc_pn()->core->get_product_note_values(
+			array() !== alg_wc_pn()->core->get_product_note_values(
 				$private_or_public,
 				$product_id
 			)
@@ -64,12 +69,16 @@ if ( ! function_exists( 'alg_wc_pn_has_product_notes' ) ) {
 
 if ( ! function_exists( 'alg_wc_pn_get_product_notes' ) ) {
 	/**
-	 * alg_wc_pn_get_product_notes.
+	 * Get product notes.
 	 *
 	 * @version 2.7.0
 	 * @since   1.1.3
 	 *
-	 * @todo    (dev) all notes for the **order**
+	 * @param string $private_or_public Private or public.
+	 * @param int    $product_id        Product ID.
+	 * @param array  $args              Arguments for formatting the notes.
+	 *
+	 * @todo (dev) all notes for the **order**
 	 */
 	function alg_wc_pn_get_product_notes( $private_or_public, $product_id = 0, $args = array() ) {
 		$notes = '';
@@ -88,24 +97,31 @@ if ( ! function_exists( 'alg_wc_pn_get_product_notes' ) ) {
 
 if ( ! function_exists( 'alg_wc_product_notes_shortcode' ) ) {
 	/**
-	 * alg_wc_product_notes_shortcode.
+	 * Product notes shortcode.
 	 *
 	 * @version 3.1.1
 	 * @since   1.1.3
 	 *
-	 * @todo    (dev) use `$content`
+	 * @param array $atts Shortcode attributes.
+	 *
+	 * @todo (dev) use `$content`
 	 */
-	function alg_wc_product_notes_shortcode( $atts, $content = '' ) {
-		$atts = shortcode_atts( array(
-			'private_or_public' => 'public',
-			'product_id'        => 0,
-			'glue'              => '<br>',
-			'content'           => '%product_notes%',
-			'do_shortcode'      => false,
-			'do_esc_html'       => true,
-			'do_wpautop'        => true,
-			'make_clickable'    => true,
-		), $atts, 'alg_wc_product_notes_shortcode' );
+	function alg_wc_product_notes_shortcode( $atts ) {
+		$atts = shortcode_atts(
+			array(
+				'private_or_public' => 'public',
+				'product_id'        => 0,
+				'glue'              => '<br>',
+				'content'           => '%product_notes%',
+				'do_shortcode'      => false,
+				'do_esc_html'       => true,
+				'do_wpautop'        => true,
+				'make_clickable'    => true,
+			),
+			$atts,
+			'alg_wc_product_notes_shortcode'
+		);
+
 		return wp_kses_post(
 			alg_wc_pn_get_product_notes(
 				$atts['private_or_public'],
@@ -113,9 +129,9 @@ if ( ! function_exists( 'alg_wc_product_notes_shortcode' ) ) {
 				array(
 					'glue'           => $atts['glue'],
 					'content'        => $atts['content'],
-					'do_shortcode'   => filter_var( $atts['do_shortcode'],   FILTER_VALIDATE_BOOLEAN ),
-					'do_esc_html'    => filter_var( $atts['do_esc_html'],    FILTER_VALIDATE_BOOLEAN ),
-					'do_wpautop'     => filter_var( $atts['do_wpautop'],     FILTER_VALIDATE_BOOLEAN ),
+					'do_shortcode'   => filter_var( $atts['do_shortcode'], FILTER_VALIDATE_BOOLEAN ),
+					'do_esc_html'    => filter_var( $atts['do_esc_html'], FILTER_VALIDATE_BOOLEAN ),
+					'do_wpautop'     => filter_var( $atts['do_wpautop'], FILTER_VALIDATE_BOOLEAN ),
 					'make_clickable' => filter_var( $atts['make_clickable'], FILTER_VALIDATE_BOOLEAN ),
 				)
 			)
