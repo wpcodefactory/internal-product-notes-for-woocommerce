@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Edit Class
  *
- * @version 3.2.0
+ * @version 3.2.1
  * @since   2.0.0
  *
  * @author WPFactory
@@ -17,7 +17,7 @@ if ( ! class_exists( 'Alg_WC_PN_Edit' ) ) :
 	/**
 	 * Alg_WC_PN_Edit class.
 	 *
-	 * @version 3.2.0
+	 * @version 3.2.1
 	 * @since   2.0.0
 	 */
 	class Alg_WC_PN_Edit {
@@ -160,7 +160,7 @@ if ( ! class_exists( 'Alg_WC_PN_Edit' ) ) :
 		/**
 		 * Admin enqueue scripts.
 		 *
-		 * @version 3.2.0
+		 * @version 3.2.1
 		 * @since   2.0.0
 		 *
 		 * @param string $hook Current admin page.
@@ -218,8 +218,11 @@ if ( ! class_exists( 'Alg_WC_PN_Edit' ) ) :
 					get_option( "alg_wc_pn_{$private_or_public}_textarea_style", 'width:100%;height:150px;' ) :
 					'width:100%;'
 				);
+				$style_value  = safecss_filter_attr( $style_value );
 
-				$style[] = "textarea.{$id} { {$style_value} }";
+				if ( '' !== $id && '' !== $style_value ) {
+					$style[] = "textarea.{$id} { {$style_value} }";
+				}
 			}
 
 			if ( ! empty( $style ) ) {
@@ -234,7 +237,7 @@ if ( ! class_exists( 'Alg_WC_PN_Edit' ) ) :
 
 				wp_add_inline_style(
 					'alg-wc-pn-admin-textarea',
-					implode( PHP_EOL, $style )
+					wp_strip_all_tags( implode( PHP_EOL, $style ) )
 				);
 			}
 		}
