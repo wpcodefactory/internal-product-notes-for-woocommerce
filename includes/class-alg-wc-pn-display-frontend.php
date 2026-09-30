@@ -2,7 +2,7 @@
 /**
  * Product Notes for WooCommerce - Display Class
  *
- * @version 3.2.0
+ * @version 3.2.2
  * @since   2.0.0
  *
  * @author WPFactory
@@ -17,7 +17,7 @@ if ( ! class_exists( 'Alg_WC_PN_Display_Frontend' ) ) :
 	/**
 	 * Alg_WC_PN_Display_Frontend class.
 	 *
-	 * @version 3.2.0
+	 * @version 3.2.2
 	 * @since   2.0.0
 	 */
 	class Alg_WC_PN_Display_Frontend {
@@ -45,7 +45,7 @@ if ( ! class_exists( 'Alg_WC_PN_Display_Frontend' ) ) :
 		/**
 		 * Constructor.
 		 *
-		 * @version 3.2.0
+		 * @version 3.2.2
 		 * @since   2.0.0
 		 *
 		 * @todo (dev) Code refactoring: merge "product meta" with  "single/loop"
@@ -90,7 +90,7 @@ if ( ! class_exists( 'Alg_WC_PN_Display_Frontend' ) ) :
 			add_action( 'woocommerce_after_cart_item_name', array( $this, 'display_in_cart' ) );
 
 			// Checkout.
-			add_action( 'woocommerce_cart_item_name', array( $this, 'display_in_checkout' ) );
+			add_action( 'woocommerce_cart_item_name', array( $this, 'display_in_checkout' ), 10, 2 );
 		}
 
 		/**

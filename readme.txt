@@ -4,7 +4,7 @@ Tags: woocommerce, product, product note, woo commerce
 Requires at least: 4.8
 Tested up to: 7.1
 Requires PHP: 7.0
-Stable tag: 3.2.1
+Stable tag: 3.2.2
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -51,6 +51,9 @@ With [premium plugin version](https://wpfactory.com/item/product-notes-for-wooco
 3. Start by visiting plugin settings at "WooCommerce > Settings > Product Notes".
 
 == Changelog ==
+
+= 3.2.2 - 30/09/2026 =
+* Fix - "Too few arguments to function Alg_WC_PN_Display_Frontend::display_in_checkout()" error fixed.
 
 = 3.2.1 - 28/09/2026 =
 * Dev - Inline CSS escaped.

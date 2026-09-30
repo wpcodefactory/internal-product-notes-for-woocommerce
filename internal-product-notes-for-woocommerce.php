@@ -3,7 +3,7 @@
  * Plugin Name: Product Notes Tab & Private Admin Notes for WooCommerce
  * Plugin URI: https://wpfactory.com/item/product-notes-for-woocommerce/
  * Description: Add notes to WooCommerce products.
- * Version: 3.2.1
+ * Version: 3.2.2
  * Author: WPFactory
  * Author URI: https://wpfactory.com
  * Text Domain: product-notes-for-woocommerce
@@ -50,7 +50,7 @@ if ( 'internal-product-notes-for-woocommerce.php' === basename( __FILE__ ) ) {
 /**
  * Plugin version.
  */
-defined( 'ALG_WC_PRODUCT_NOTES_VERSION' ) || define( 'ALG_WC_PRODUCT_NOTES_VERSION', '3.2.1' );
+defined( 'ALG_WC_PRODUCT_NOTES_VERSION' ) || define( 'ALG_WC_PRODUCT_NOTES_VERSION', '3.2.2' );
 
 /**
  * Plugin file.
