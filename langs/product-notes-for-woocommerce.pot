@@ -2,16 +2,16 @@
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Product Notes Tab & Private Admin Notes for WooCommerce 3.2.2\n"
+"Project-Id-Version: Product Notes Tab & Private Admin Notes for WooCommerce 3.2.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/internal-product-notes-for-woocommerce\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-30T08:34:11+00:00\n"
+"POT-Creation-Date: 2026-11-23T12:29:20+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.11.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: product-notes-for-woocommerce\n"
 
 #. Plugin Name of the plugin
@@ -74,6 +74,7 @@ msgstr ""
 
 #. Translators: %1$s: Author name, %2$s: Formatted time.
 #: includes/class-alg-wc-pn-edit.php:96
+#, php-format
 msgid "Last modified by %1$s on %2$s."
 msgstr ""
 
@@ -90,6 +91,7 @@ msgstr ""
 
 #. Translators: %1$s: Author name, %2$s: Formatted time.
 #: includes/class-alg-wc-pn-edit.php:334
+#, php-format
 msgid "last modified by %1$s on %2$s"
 msgstr ""
 
@@ -103,6 +105,7 @@ msgstr ""
 
 #. Translators: %d: Number of products.
 #: includes/class-alg-wc-pn-tools.php:84
+#, php-format
 msgid "All notes have been deleted for %d product(s)."
 msgstr ""
 
@@ -137,11 +140,13 @@ msgstr ""
 
 #. translators: 1: number of orders processed, 2: number of notes added
 #: includes/pro/class-alg-wc-pn-display-backend.php:101
+#, php-format
 msgid "%1$d order(s) processed. %2$d note(s) added."
 msgstr ""
 
 #. translators: %d: number of notes deleted
 #: includes/pro/class-alg-wc-pn-display-backend.php:144
+#, php-format
 msgid "%d note(s) deleted."
 msgstr ""
 
@@ -151,6 +156,7 @@ msgstr ""
 
 #. translators: %s: product notes
 #: includes/pro/class-alg-wc-pn-search.php:195
+#, php-format
 msgid "note(s): %s"
 msgstr ""
 
@@ -258,6 +264,7 @@ msgstr ""
 #. translators: %s: placeholder
 #: includes/settings/class-alg-wc-pn-settings-advanced.php:170
 #: includes/settings/class-alg-wc-pn-settings-section.php:383
+#, php-format
 msgid "Placeholder: %s"
 msgstr ""
 
@@ -301,86 +308,102 @@ msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:145
+#, php-format
 msgid "Notices: %d"
 msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:149
 #: includes/settings/class-alg-wc-pn-settings-section.php:185
+#, php-format
 msgid "Sale flash: %d"
 msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:151
+#, php-format
 msgid "Images: %d"
 msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:155
 #: includes/settings/class-alg-wc-pn-settings-section.php:191
+#, php-format
 msgid "Title: %d"
 msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:157
 #: includes/settings/class-alg-wc-pn-settings-section.php:195
+#, php-format
 msgid "Rating: %d"
 msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:159
 #: includes/settings/class-alg-wc-pn-settings-section.php:197
+#, php-format
 msgid "Price: %d"
 msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:161
+#, php-format
 msgid "Excerpt: %d"
 msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:163
 #: includes/settings/class-alg-wc-pn-settings-section.php:203
+#, php-format
 msgid "Add to cart: %d"
 msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:165
+#, php-format
 msgid "Meta: %d"
 msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:167
+#, php-format
 msgid "Sharing: %d"
 msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:171
+#, php-format
 msgid "Tabs: %d"
 msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:173
+#, php-format
 msgid "Upsells: %d"
 msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:175
+#, php-format
 msgid "Related products: %d"
 msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:181
+#, php-format
 msgid "Link open: %d"
 msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:187
+#, php-format
 msgid "Thumbnail: %d"
 msgstr ""
 
 #. translators: %d: priority
 #: includes/settings/class-alg-wc-pn-settings-section.php:201
+#, php-format
 msgid "Link close: %d"
 msgstr ""
 
@@ -483,6 +506,7 @@ msgstr ""
 
 #. translators: %s: section title
 #: includes/settings/class-alg-wc-pn-settings-section.php:347
+#, php-format
 msgid "Show product notes on frontend: %s."
 msgstr ""
 
@@ -497,6 +521,7 @@ msgstr ""
 #. translators: %s: hook name
 #: includes/settings/class-alg-wc-pn-settings-section.php:376
 #: includes/settings/class-alg-wc-pn-settings-section.php:396
+#, php-format
 msgid "Position: %s"
 msgstr ""
 
@@ -506,6 +531,7 @@ msgstr ""
 
 #. translators: %s: list of known priorities for the hook
 #: includes/settings/class-alg-wc-pn-settings-section.php:404
+#, php-format
 msgid "Known priorities: %s"
 msgstr ""
 
@@ -515,6 +541,7 @@ msgstr ""
 
 #. translators: %s: option name
 #: includes/settings/class-alg-wc-pn-settings-section.php:428
+#, php-format
 msgid "Please note that \"%s\" option must be enabled."
 msgstr ""
 
@@ -579,6 +606,7 @@ msgstr ""
 #. translators: %1$s: option name, %2$s: option name
 #: includes/settings/class-alg-wc-pn-settings-section.php:520
 #: includes/settings/class-alg-wc-pn-settings-section.php:533
+#, php-format
 msgid "Ignored if \"%1$s > %2$s\" option is enabled."
 msgstr ""
 
@@ -608,6 +636,7 @@ msgstr ""
 
 #. translators: %s: item meta key
 #: includes/settings/class-alg-wc-pn-settings-section.php:569
+#, php-format
 msgid "Item meta key: %s"
 msgstr ""
 
@@ -673,11 +702,13 @@ msgstr ""
 
 #. translators: %s: plugin link
 #: includes/settings/class-alg-wc-pn-settings-section.php:689
+#, php-format
 msgid "Show product notes in PDF documents from the %s plugin."
 msgstr ""
 
 #. translators: %s: example template types
 #: includes/settings/class-alg-wc-pn-settings-section.php:703
+#, php-format
 msgid "Comma separated list of PDF document template types to show product notes in, e.g., %s."
 msgstr ""
 
@@ -692,6 +723,7 @@ msgstr ""
 
 #. translators: 1: plugin link, 2: plugin author
 #: includes/settings/class-alg-wc-pn-settings-section.php:719
+#, php-format
 msgid "Make product notes importable in the %1$s plugin (by %2$s)."
 msgstr ""
 
@@ -702,6 +734,7 @@ msgstr ""
 
 #. translators: 1: plugin link
 #: includes/settings/class-alg-wc-pn-settings-section.php:735
+#, php-format
 msgid "Show product notes in vendor product form from the %s plugin."
 msgstr ""
 
